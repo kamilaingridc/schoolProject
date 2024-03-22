@@ -18,7 +18,7 @@ def initial_population():
     insert_sql_professor = "INSERT INTO App_School_professor (nome, email, senha) VALUES"
     insert_sql_professor = insert_sql_professor + "('Prof. Barak Obama', 'barak.obama@gmail.com', '" + senha_armazenar + "'), "
     insert_sql_professor = insert_sql_professor + "('Profa. Angela Merkel', 'angela.merkel@gmail.com', '" + senha_armazenar + "'), "
-    insert_sql_professor = insert_sql_professor + "('Prof. Xi Jinping', 'xi.jinping@gmail.com', '" + senha_armazenar + "'),"
+    insert_sql_professor = insert_sql_professor + "('Prof. Xi Jinping', 'xi.jinping@gmail.com', '" + senha_armazenar + "')"
 
     cursor.execute(insert_sql_professor)
     transaction.atomic()  # necessário commit para insert e update
@@ -29,7 +29,7 @@ def initial_population():
     insert_sql_turma = "INSERT INTO App_School_turma (nome_turma, id_professor_id) VALUES"
     insert_sql_turma = insert_sql_turma + "('1º semestre - Desenvolvimento de Sistemas', 1),"
     insert_sql_turma = insert_sql_turma + "('2º semestre - Desenvolvimento de Sistemas', 2),"
-    insert_sql_turma = insert_sql_turma + "('3º semestre - Desenvolvimento de Sistemas', 3),"
+    insert_sql_turma = insert_sql_turma + "('3º semestre - Desenvolvimento de Sistemas', 3)"
 
     cursor.execute(insert_sql_turma)
     transaction.atomic()  # necessário commit para insert e update
@@ -38,9 +38,9 @@ def initial_population():
     # popular tabela atividade
     # instrução SQL
     insert_sql_atividade = "INSERT INTO App_School_atividade (nome_atividade, id_turma_id) VALUES"
-    insert_sql_atividade = insert_sql_atividade + "('Apresentar Fundamentos de Programação', 1"
-    insert_sql_atividade = insert_sql_atividade + "('Apresentar Framework Django', 2"
-    insert_sql_atividade = insert_sql_atividade + "('Apresentar conceitos de gerenciamento de projetos', 3"
+    insert_sql_atividade = insert_sql_atividade + "('Apresentar Fundamentos de Programação', 1),"
+    insert_sql_atividade = insert_sql_atividade + "('Apresentar Framework Django', 2),"
+    insert_sql_atividade = insert_sql_atividade + "('Apresentar conceitos de gerenciamento de projetos', 3)"
 
     cursor.execute(insert_sql_atividade)
     transaction.atomic()  # necessário commit para insert e update
